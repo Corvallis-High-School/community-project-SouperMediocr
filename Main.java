@@ -1,8 +1,9 @@
 class Main {
 
   public static void main(String[] args) {
-    // Construct 2 objects of your class using the constructor with different values
+    McDonaldsMenu item = new McDonaldsMenu("Burger", 7.99, 13.2, 800);
+    McDonaldsMenu item2 = new McDonaldsMenu("FiletOFish", 4.25, 9.76, 612);
 
-    // call all of the objects methods to test them
+    System.out.print(item2.getCalories());
   }
 }
