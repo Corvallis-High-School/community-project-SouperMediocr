@@ -1,4 +1,4 @@
-public class McDonaldsMenu {
+class McDonaldsMenu {
     private String itemName;
     private double itemPrice;
     private double itemWeight;
@@ -65,4 +65,32 @@ public class McDonaldsMenu {
 
 
 
+}
+
+class Drink extends McDonaldsMenu
+{
+    String size;
+    public Drink(String n, double d, double d2, int i, String size)
+    {
+        super(n, d, d2, i);
+        this.size = size;               
+    }
+    public String getSize()
+    {
+        return size;
+    }
+    public void setSize(String s)
+    {
+        size = s;
+    }
+}
+
+class Combo extends McDonaldsMenu
+{
+    int itemsInCombo;
+    public Combo(String n, double d, double d2, int i, int i2)
+    {
+        super(n, d, d2, i);
+        itemsInCombo = i2;
+    }
 }
