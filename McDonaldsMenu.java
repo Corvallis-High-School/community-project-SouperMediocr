@@ -1,8 +1,8 @@
 class McDonaldsMenu {
-    private String itemName;
-    private double itemPrice;
-    private double itemWeight;
-    private int itemCalories;
+    public String itemName;
+    public double itemPrice;
+    public double itemWeight;
+    public int itemCalories;
 
     public McDonaldsMenu(String name, double price, double weight, int calories)
     {
@@ -83,14 +83,35 @@ class Drink extends McDonaldsMenu
     {
         size = s;
     }
+    public String toString()
+    {
+        return itemName + " " + itemPrice + " " + itemWeight + " " + itemCalories + " " + size;
+    }
 }
 
 class Combo extends McDonaldsMenu
 {
-    int itemsInCombo;
+    public int itemsInCombo;
     public Combo(String n, double d, double d2, int i, int i2)
     {
         super(n, d, d2, i);
         itemsInCombo = i2;
+    }
+    public int getItemsInCombo()
+    {
+        return itemsInCombo;
+    }
+    public void setItemsInCombo(int i)
+    {
+        itemsInCombo = i;
+    }
+    public void discountedItem(int discountPercent)
+    {
+        itemPrice = itemPrice * (100 - discountPercent) / 100;
+        System.out.println("the Combo discount was " + discountPercent + " and it now costs only " + itemPrice + " dollars");
+    }
+    public String toString()
+    {
+        return itemName + " " + itemPrice + " " + itemWeight + " " + itemCalories + " " + itemsInCombo;
     }
 }
